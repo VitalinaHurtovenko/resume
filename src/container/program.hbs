@@ -1,0 +1,156 @@
+<div>
+    {{#with program}}
+    {{#with excursion}}
+
+    <div style="text-align: center;">
+        <h1>Excursion</h1>
+
+        <div>
+            {{name}}
+            <br>
+            {{#with location}}
+            <br>
+            <address>{{city}}, {{country}}</address>
+            {{/with}}
+        </div>
+        <br>
+        <div>
+            Date: <time datetime="2023-06-15">{{date}}</time>
+        </div>
+    </div>
+    <hr>
+
+    <div>
+        <div>
+            <h2>Program №1 :</h2>
+        </div>
+
+        <ul>
+
+            <li>
+                <div><em>"{{program.[0].name}}"</em></div>
+                <br>
+                <div>Type: {{program.[0].type}}</div>
+                <br>
+                <div>Duration - {{program.[0].duration}} hours</div>
+            </li>
+        </ul>
+        <div>
+            <h3>Details:</h3>
+        </div>
+        {{#each program}}
+        {{#with details}}
+        {{#with museum}}
+        <div>Museum: {{name}}</div>
+        <br>
+
+        {{#with location}}
+        <div>
+            <address> Address: {{address}}, {{city}}, {{country}} </address>
+        </div>
+        {{/with}}
+
+        <div>
+            <div>
+                <h4>Exhibits:</h4>
+            </div>
+            <ul>
+                {{#each exhibits}}
+                <li>
+                    <div>"{{name}}"</div>
+                    <div>{{> artist}}</div>
+                    <div>{{description}}</div>
+                    <div>{{> audio audio_guide=true}}</div>
+                    <br>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+        <div>
+            <h3>Guide:</h3>
+        </div>
+
+
+        {{/with}}
+
+        {{#with guideo}}
+        <div>
+            <div>Name: {{name}}</div>
+            <br>
+            <div>Language: {{language}}</div>
+            <br>
+            <div>Rating: {{rating}}</div>
+        </div>
+        {{/with}}
+
+        {{/with}}
+
+        {{/each}}
+
+        <div>
+            <div>
+                <h2>Program №2:</h2>
+            </div>
+            <ul>
+
+                <li>
+                    <div><em>"{{program.[1].name}}"</em></div>
+                    <br>
+                    <div>Type: {{program.[1].type}}</div>
+                    <br>
+                    <div>Duration - {{program.[1].duration}} hours</div>
+                </li>
+            </ul>
+            {{#each program}}
+            {{#with details}}
+
+            {{#with venue}}
+            <div>
+                <h3>Details:</h3>
+            </div>
+            <div>Name: {{name}}</div>
+            <br>
+            {{#with location}}
+            <div>
+                <address>Location: {{address}}, {{city}}, {{country}}</address>
+            </div>
+            {{/with}}
+            {{/with}}
+            <br>
+            <div>
+                <h3>Performers:</h3>
+            </div>
+            <ul>
+                {{#each performers}}
+                <li>
+
+                    <div>Name: {{name}}</div>
+                    <br>
+                    <div>Type: {{type}}</div>
+                    <br>
+                </li>
+                <br>
+                {{/each}}
+            </ul>
+            <div>
+                <h3>Guide:</h3>
+            </div>
+            <div>
+                {{#with guidet}}
+                <div>Name:{{name}}</div>
+                <br>
+                <div>Language: {{language}}</div>
+                <br>
+                <div>Rating: {{rating}}</div>
+                {{/with}}
+            </div>
+            {{/with}}
+            {{/each}}
+            <div>
+
+            </div>
+        </div>
+    </div>
+    {{/with}}
+    {{/with}}
+</div>
