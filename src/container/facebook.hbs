@@ -1,0 +1,130 @@
+<div style="margin-left: 20px;">
+    <div>
+
+        <br>
+
+        <div style="text-align: center;">
+            <h1>
+                {{name}}
+            </h1>
+        </div>
+
+        <hr>
+
+        <div>
+            <div>
+                <h2>Users:</h2>
+            </div>
+
+            <ul>
+                {{#each users}}
+                <li>
+                    <div>
+                        <div>{{name}}</div>
+                        <div>Gender: {{gender}}</div>
+                        <div>{{age}} y.o.</div>
+                        <div>ID: {{id}}</div>
+
+                        <br>
+
+                        <div style="margin-left: 20px;">
+                            <div>
+                                <h4>Friends:</h4>
+                            </div>
+
+                            <ul>
+                                {{#each friends}}
+                                <div style="margin-left: 20px;">
+                                    <li>
+                                        <div>{{name}}</div>
+                                        <div>Gender: {{gender}}</div>
+                                        <div>{{age}} y.o.</div>
+                                        <div>ID: {{id}}</div>
+
+                                        <br>
+
+                                        <div style="margin-left: 20px;">
+                                            <div>
+                                                <b>Mutual friends:</b>
+                                            </div>
+
+                                            {{#each mutual_friends}}
+                                            <div style="margin-left: 20px;">
+                                                <div>{{name}}</div>
+                                                <div>Gender: {{gender}}</div>
+                                                <div>{{age}} y.o.</div>
+                                                <div>ID: {{id}}</div>
+                                                <br>
+                                            </div>
+                                            {{/each}}
+                                        </div>
+
+
+
+                                    </li>
+                                </div>
+                                {{/each}}
+
+
+                            </ul>
+                        </div>
+
+                        <br>
+
+
+                    </div>
+
+                    <div>
+                        <div>
+                            <h4> Groups:</h4>
+                        </div>
+
+                        <ul>
+                            {{#each groups}}
+                            <li>
+                                <div style="margin-left: 20px;">
+                                    <div>{{name}}</div>
+                                    <div>"{{description}}"</div>
+                                    <div>ID: {{id}}</div>
+                                </div>
+
+                                <div style="margin-left: 20px;">
+                                    <br>
+                                    <ul>
+
+                                        {{#each members}}
+                                        <li>
+
+                                            <div>Members:</div>
+                                            <div style="margin-left: 20px;">
+                                                <div>{{name}}</div>
+                                                <div>Gender: {{gender}}</div>
+                                                <div>{{age}} y.o.</div>
+                                                <div>ID: {{id}}</div>
+                                            </div>
+                                            <br>
+
+                                        </li>
+                                        {{/each}}
+                                    </ul>
+
+                                </div>
+
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </li>
+                <hr>
+                {{/each}}
+
+            </ul>
+
+
+
+
+        </div>
+    </div>
+
+
+</div>
