@@ -1,0 +1,220 @@
+<div style="margin-left: 20px;">
+    <br>
+    <div style="text-align: center;">
+        <div>
+            <h1><em>{{name}}</em></h1>
+        </div>
+
+        <br>
+
+        <div>{{description}}</div>
+        <div>Category: {{category}}</div>
+        <div>Price: {{price}} $</div>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    {{#with features}}
+    <div>
+        <div>
+            <h2>Features:</h2>
+        </div>
+
+        <br>
+
+        {{#with processor}}
+        <div style="margin-left: 20px;">
+            <div>
+                <h4>Processor:</h4>
+            </div>
+
+            <div style="margin-left: 20px;">
+                <div>Brand: {{brand}}</div>
+                <div>Model: {{model}}</div>
+                <div>Speed: {{speed}}</div>
+                <div>Cores: {{cores}}</div>
+                <div>Cache: {{cache}}</div>
+            </div>
+        </div>
+        {{/with}}
+
+        <br>
+        <hr>
+        <br>
+
+        {{#with memory}}
+        <div style="margin-left: 20px;">
+            <div>
+                <h4>Memory:</h4>
+            </div>
+
+            <div style="margin-left: 20px;">
+                <div>Type: {{type}}</div>
+                <div>Size: {{size}}</div>
+                <div>Speed: {{speed}}</div>
+            </div>
+        </div>
+        {{/with}}
+
+        <br>
+        <hr>
+        <br>
+
+        {{#with storage}}
+        <div style="margin-left: 20px;">
+            <div>
+                <h4>Storage:</h4>
+            </div>
+
+            <div style="margin-left: 20px;">
+                <div>Type: {{type}}</div>
+                <div>Size: {{size}}</div>
+            </div>
+        </div>
+        {{/with}}
+
+        <br>
+        <hr>
+        <br>
+
+        {{#with display}}
+        <div style="margin-left: 20px;">
+            <div>
+                <h4>Display:</h4>
+            </div>
+
+            <div style="margin-left: 20px;">
+                <div>Size: {{size}}</div>
+                <div>Resolution: {{resolution}}</div>
+                <div>Technology: {{technology}}</div>
+                <div>Color space: {{color_space}}</div>
+                <div>Brightness: {{brightness}}</div>
+            </div>
+        </div>
+        {{/with}}
+
+        <br>
+        <hr>
+        <br>
+
+        {{#with graphics}}
+        <div style="margin-left: 20px;">
+            <div>
+                <h4>Graphics:</h4>
+            </div>
+
+            <div style="margin-left: 20px;">
+                <div>Brand: {{brand}}</div>
+                <div>Model: {{model}}</div>
+                <div>Memory: {{memory}}</div>
+            </div>
+        </div>
+        {{/with}}
+
+        <br>
+        <hr>
+        <br>
+
+        <div style="margin-left: 20px;">
+            <div>
+                <h4>Ports:</h4>
+            </div>
+
+            <ul>
+                {{#each ports}}
+                <li>
+                    <div>
+                        <div>
+                            <div>Type: {{type}}</div>
+                            <div>Count: {{count}}</div>
+                        </div>
+
+                        <div>Features:</div>
+                        {{> features}}
+                        <br>
+                    </div>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        {{#with battery}}
+        <div style="margin-left: 20px;">
+            <div>
+                <h4>Battery:</h4>
+            </div>
+
+            <div style="margin-left: 20px;">
+                <div>Type: {{type}}</div>
+                <div>Capacity: {{capacity}}</div>
+                <div>Life: {{life}}</div>
+            </div>
+        </div>
+        {{/with}}
+
+        <br>
+        <hr>
+        <br>
+
+        <div style="margin-left: 20px;">
+            <h4>Weight:</h4>
+            <div style="margin-left: 20px;">{{weight}}</div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        {{#with dimensions}}
+        <div style="margin-left: 20px;">
+            <div>
+                <h4>Dimensions:</h4>
+            </div>
+
+            <div style="margin-left: 20px;">
+                <div>Height: {{height}}</div>
+                <div>Width: {{width}}</div>
+                <div>Depth: {{depth}}</div>
+            </div>
+        </div>
+        {{/with}}
+
+        <br>
+        <hr>
+        <br>
+
+        <div style="margin-left: 20px;">
+            <h4>Operating system:</h4>
+            <div style="margin-left: 20px;">{{operating_system}}</div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <div style="margin-left: 20px;">
+            <div>
+                <h4>Accessories:</h4>
+            </div>
+
+            <ul>
+                {{#each accessories}}
+                <li>
+                    <div>
+                        <div>Name: {{name}}</div>
+                        <div>Price: {{price}}</div>
+                    </div>
+                    <br>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    {{/with}}
+</div>
