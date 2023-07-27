@@ -756,6 +756,7 @@ router.get("/facebook", function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render("facebook", {
     layout: "basic",
+
     name: "Facebook",
     users: [
       {
@@ -863,39 +864,39 @@ router.get("/facebook", function (req, res) {
                 ],
               },
             ],
-            groups: [
+          },
+        ],
+        groups: [
+          {
+            id: 3,
+            name: "Travel Addicts",
+            description:
+              "A group for people who love to travel and explore new places",
+            members: [
               {
-                id: 3,
-                name: "Travel Addicts",
-                description:
-                  "A group for people who love to travel and explore new places",
-                members: [
-                  {
-                    id: 22,
-                    name: "Jackie Chen",
-                    gender: "Female",
-                    age: 26,
-                  },
-                ],
+                id: 22,
+                name: "Jackie Chen",
+                gender: "Female",
+                age: 26,
+              },
+            ],
+          },
+          {
+            id: 4,
+            name: "Pet Lovers",
+            description: "A group for people who love their furry friends",
+            members: [
+              {
+                id: 16,
+                name: "Amy Lee",
+                gender: "Female",
+                age: 30,
               },
               {
-                id: 4,
-                name: "Pet Lovers",
-                description: "A group for people who love their furry friends",
-                members: [
-                  {
-                    id: 16,
-                    name: "Amy Lee",
-                    gender: "Female",
-                    age: 30,
-                  },
-                  {
-                    id: 25,
-                    name: "John Smith",
-                    gender: "Male",
-                    age: 33,
-                  },
-                ],
+                id: 25,
+                name: "John Smith",
+                gender: "Male",
+                age: 33,
               },
             ],
           },
