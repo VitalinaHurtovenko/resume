@@ -750,4 +750,11 @@ router.get("/js", function (req, res) {
 });
 
 // ================================================================
+
+router.get("/bootstrap", function (req, res) {
+  res.render("bootstrap", {
+    layout: "bootstrap",
+  });
+});
+
 module.exports = router;
