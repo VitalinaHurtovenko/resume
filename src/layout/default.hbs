@@ -5,7 +5,8 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+
+<head class="m-3">
 
 	<title>
 		{{page.title}}
@@ -19,32 +20,29 @@
 		integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 
-<body>
+<body class="m-4">
 	{{#with header}}
-	<header>
-		<div>
+	<header class="mb-2">
+		<div class="mb-2">
 			<h1>{{name.firstname}} {{name.lastname}}</h1>
 		</div>
 
-		<div>
+		<div class="mb-2">
 			<b>{{position}}</b>
 		</div>
 
-		<br>
 
-		<div>
+		<div class="mb-2">
 			<em>{{salary}}</em>
 		</div>
 
-		<br>
 
-		<address>
+		<address class="mb-2">
 			<div>
 				<em>{{address}}</em>
 			</div>
 		</address>
 
-		<br>
 
 		<hr>
 	</header>
