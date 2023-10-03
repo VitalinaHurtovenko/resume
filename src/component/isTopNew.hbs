@@ -1,0 +1,26 @@
+{{#if isTop}}
+<section class="badge rounded-pill text-bg-success">Топ</section>
+{{else}}
+
+{{/if}}
+
+
+
+{{#if isNew}}
+<section class="badge rounded-pill text-bg-danger">Нова</section>
+{{else}}
+{{/if}}
+
+{{#if isActive}}
+<div class="nav-item">
+    <a href="#" class="nav-link active">{{text}}</a>
+</div>
+{{else if isDisabled}}
+<div class="nav-item">
+    <a href="#" class="nav-link disabled">{{text}}</a>
+</div>
+{{else}}
+<div class="nav-item">
+    <a href="#" class="nav-link">{{text}}</a>
+</div>
+{{/if}}
