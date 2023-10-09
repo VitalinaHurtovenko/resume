@@ -8,11 +8,29 @@
 {{/if}}
 
 {{#if isOutline}}
-  <div>
+  <div class='mb-3'>
     <button class='btn btn-outline-primary'>
       {{text}}
     </button>
   </div>
 
+{{else}}
+{{/if}}
+
+{{#if isDanger}}
+  <div class='mb-3'>
+    <button class='btn btn-outline-danger'>
+      {{text}}
+    </button>
+  </div>
+{{else}}
+{{/if}}
+
+{{#if isSuccess}}
+  <div class='mb-3'>
+    <button class='btn btn-success'>
+      {{text}}
+    </button>
+  </div>
 {{else}}
 {{/if}}
