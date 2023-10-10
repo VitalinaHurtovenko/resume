@@ -1,12 +1,12 @@
 {{#if isSuccess}}
-  <button class='btn btn-success mb-2'>
+  <button class='btn btn-success'>
     {{text}}
   </button>
 {{else}}
 {{/if}}
 
 {{#if isDanger}}
-  <button class='btn btn-danger mb-2'>
+  <button class='btn btn-danger'>
     {{text}}
   </button>
 {{else}}
@@ -15,6 +15,14 @@
 {{#if isInfo}}
 
   <button class='btn btn-info text-white'>
+    {{text}}
+  </button>
+{{else}}
+{{/if}}
+
+{{#if isWarning}}
+
+  <button class='btn btn-warning text-white'>
     {{text}}
   </button>
 {{else}}
