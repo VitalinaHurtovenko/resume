@@ -1,23 +1,30 @@
-<div>
+<div class="m-3">
+   
+
     {{#with main}}
     <main>
-        <section>
-            {{> title data="My educationss:" big=true}}
+        <div class="row">
+            <div class="col-3">
+                <section>
+                    {{> title data="My educationss:" big=true}}
 
-            {{#each educations}}
-            <ul>
-                <li>
-                    {{name}}
-                    {{#if isEnd}}
-                    |
-                    {{else}}
-                    | (Ще в процессі)
-                    {{/if}}
-                </li>
-            </ul>
-            {{/each}}
-        </section>
-        <section>
+                    {{#each educations}}
+                    <ul>
+                        <li>
+                            {{name}}
+                            {{#if isEnd}}
+                            |
+                            {{else}}
+                            | (Ще в процессі)
+                            {{/if}}
+                        </li>
+                    </ul>
+                    {{/each}}
+                </section>
+       
+            </div>
+            <div class="col-9">
+                 <section>
             {{> title data="My sertificates:" }}
 
             {{#each certificates}}
@@ -30,6 +37,9 @@
             </ul>
             {{/each}}
         </section>
+            </div>
+        </div>
+       
     </main>
     {{/with}}
 </div>
